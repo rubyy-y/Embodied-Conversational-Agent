@@ -1,0 +1,89 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "hi",
+          "hey",
+          "how are you",
+          "anyone there?",
+          "hello",
+          "good day"
+        ],
+        "responses": [
+          "Hey :)",
+          "Hi there, what can I do for you?",
+          "Hello there, how can I help?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["bye", "see you later", "goodbye"],
+        "responses": [
+          "Hope to see you again! Bye.",
+          "Have a nice day.",
+          "Bye!"
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot!"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      {
+        "tag": "",
+        "patterns": [
+          "",
+          "",
+          ""
+        ],
+        "responses": [
+          "",
+          ""
+        ]
+      },
+      {
+        "tag": "",
+        "patterns": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "responses": [
+          "",
+          ""
+        ]
+      },
+      {
+        "tag": "",
+        "patterns": [
+          "",
+          "",
+          ""
+        ],
+        "responses": [
+          "",
+          ""
+        ]
+      },
+      {
+        "tag": "joke",
+        "patterns": [
+          "Tell me a joke!",
+          "Tell me something funny!",
+          "Do you know a joke?"
+        ],
+        "responses": [
+          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+          "The future, the present, and the past walk into a bar. Things got a little tense.",
+          "Two wifi engineers got married. The reception was fantastic.",
+          "Adam & Eve were the first ones to ignore the Apple terms and conditions.",
+          "When the cannibal showed up late to the buffet, they gave him the cold shoulder.",
+          "The man who invented knock-knock jokes should get a no bell prize.",
+          "A Mexican magician tells the audience he will disappear on the count of three. He says, 'Uno, dos…' and poof! He disappeared without a tres."
+        ]
+      }
+    ]
+  }
+  
