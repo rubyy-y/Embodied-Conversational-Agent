@@ -43,31 +43,6 @@
         ]
       },
       {
-        "tag": "",
-        "patterns": [
-          "",
-          "",
-          "",
-          ""
-        ],
-        "responses": [
-          "",
-          ""
-        ]
-      },
-      {
-        "tag": "",
-        "patterns": [
-          "",
-          "",
-          ""
-        ],
-        "responses": [
-          "",
-          ""
-        ]
-      },
-      {
         "tag": "joke",
         "patterns": [
           "Tell me a joke!",
