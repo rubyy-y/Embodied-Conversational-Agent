@@ -40,7 +40,6 @@ def bag_of_words(pat, all_words):
     pat = [preprocess(w) for w in pat]
     bag = np.zeros(len(all_words), dtype=np.float32)
     for i, word in enumerate(all_words):
-        print(word)
         if [word] in pat:
             bag[i] = 1.0
     return bag
