@@ -7,7 +7,11 @@ from preprocessing import preprocess, bag_of_words
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-os.chdir("Embodied-Conversational-Agent")
+try:
+    os.chdir("Embodied-Conversational-Agent")
+except:
+    pass
+    
 with open('intents.json', 'r') as f:
     intents = json.load(f)
 
@@ -26,13 +30,13 @@ model.load_state_dict(model_state)
 model.eval()
 
 # Create Chat
-bot_name = "Bot ohne Name"
-print("Chat is now open. Type 'exit' to exit.")
+bot_name = "Bot without a name"
+# print("Chat is now open. Type 'exit' to exit.")
 
-while True:
-    sentence = input('You: ')
-    if sentence == "exit":
-        break
+def get_response(sentence):
+    # sentence = input('You: ')
+    # if sentence == "exit":
+    #     break
 
     sentence = preprocess(sentence)
     X = bag_of_words(sentence, all_words)
@@ -50,7 +54,20 @@ while True:
     if probability > 0.8:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                # print(f"{bot_name}: {random.choice(intent['responses'])}")
+                return random.choice(intent['responses'])
     
     else:
-        print(f"{bot_name}: I'm sorry, I do not understand that yet. Could you reformulate your request?")
+        # print(f"{bot_name}: I'm sorry, I do not understand that yet. Could you reformulate your request?")
+        return "I'm sorry, I do not understand that yet. Could you reformulate your request?"
+
+
+if __name__ == "__main__":
+    print("Chat is now open. Type 'exit' to exit.")
+    while True:
+        sentence = input('You: ')
+        if sentence == "exit":
+            break
+
+        response = get_response(sentence)
+        print(f"{bot_name}: {response}")
