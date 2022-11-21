@@ -6,6 +6,7 @@
           "hi",
           "hey",
           "how are you",
+          "hey, how are you?",
           "anyone there?",
           "hello",
           "good day"
@@ -31,15 +32,43 @@
         "responses": ["Happy to help!", "Any time!", "My pleasure"]
       },
       {
-        "tag": "",
+        "tag": "kd",
         "patterns": [
-          "",
-          "",
-          ""
+          "can you tell me about my average kd rate?",
+          "what was my kill-death rate?",
+          "show me my kd",
+          "how is my kd?",
+          "what is my kill death rate?",
+          "how many times did i die?"
         ],
         "responses": [
-          "",
-          ""
+          "You asked about the K/D-rate."
+        ]
+      },
+      {
+        "tag": "headshots",
+        "patterns": [
+          "how many headshots did i score?",
+          "show me my headshots",
+          "how many headshots did i give?",
+          "tell me about the number of head shots i gave."
+        ],
+        "responses": [
+          "You asked about the number of Headshots."
+        ]
+      },
+      {
+        "tag": "win rate",
+        "patterns": [
+          "how did i do?",
+          "what was my last win rate?",
+          "show me my win rate",
+          "they didnt stand a chance, did they?",
+          "what was my winrate?",
+          "how many times did i win?"
+        ],
+        "responses": [
+          "You asked about the win-rate."
         ]
       },
       {
