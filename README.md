@@ -1,8 +1,8 @@
 # Embodied-Conversational-Agent
 Project in the scope of the Artificial Intelligence Bachelor study at JKU Linz.
 
-This Project aims at programming an Embodied Conversational Agent for Game Analysis.
-As a programming language, it will use primarily Python, but I might consider using html and css in the progress.
+This Project aims at programming an Embodied Conversational Agent for Game Analysis. <br>
+As a programming language, it will use primarily Python, but I might consider using HTML and CSS in the process.
 
 Progress updates on this project will be presented roughly every three weeks on the JKU campus.
 
@@ -15,6 +15,7 @@ Progress updates on this project will be presented roughly every three weeks on 
 
 ## App Files
 * app.py - Flask App
+* app.js - JavaScript for app
 * base.html - base template
 * style.css - styling
 
