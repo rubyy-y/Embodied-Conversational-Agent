@@ -9,7 +9,9 @@
           "hey, how are you?",
           "anyone there?",
           "hello",
-          "good day"
+          "good day",
+          "heyo",
+          "yo"
         ],
         "responses": [
           "Hey :)",
@@ -39,7 +41,11 @@
           "show me my kd",
           "how is my kd?",
           "what is my kill death rate?",
-          "how many times did i die?"
+          "how many times did i die?",
+          "how many players have I ended?",
+          "kill death ratio",
+          "what is my k/d?",
+          "kd"
         ],
         "responses": [
           "You asked about the K/D-rate."
@@ -51,7 +57,8 @@
           "how many headshots did i score?",
           "show me my headshots",
           "how many headshots did i give?",
-          "tell me about the number of head shots i gave."
+          "tell me about the number of head shots i gave.",
+          "headshots"
         ],
         "responses": [
           "You asked about the number of Headshots."
@@ -60,15 +67,29 @@
       {
         "tag": "win rate",
         "patterns": [
-          "how did i do?",
           "what was my last win rate?",
           "show me my win rate",
-          "they didnt stand a chance, did they?",
           "what was my winrate?",
-          "how many times did i win?"
+          "how many times did i win?",
+          "win rate"
         ],
         "responses": [
           "You asked about the win-rate."
+        ]
+      },
+      {
+        "tag": "performance",
+        "patterns": [
+          "how did i do?",
+          "what was my performance?",
+          "show me my performance",
+          "all of my statistics",
+          "what are my stats?",
+          "they didnt stand a chance, right?",
+          "performance"
+        ],
+        "responses": [
+          "You asked about your general performance."
         ]
       },
       {
