@@ -30,7 +30,7 @@ model.load_state_dict(model_state)
 model.eval()
 
 # Create Chat
-bot_name = "Bot"
+bot_name = "Aria"
 # print("Chat is now open. Type 'exit' to exit.")
 
 def get_response(sentence):

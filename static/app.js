@@ -78,7 +78,7 @@ class Chatbox {
         .then (r => r.json())
         .then (r => {
             // answer key as in python
-            let message2 = { name: "Bot", message: r.answer };
+            let message2 = { name: "Aria", message: r.answer };
             this.messages.push(message2);
 
             // updates chat text
@@ -97,7 +97,7 @@ class Chatbox {
 
         // go over all messages and modify inner html code
         this.message.slice().reverse().forEach(function(item, index) {
-            if (item.name === "Bot")
+            if (item.name === "Aria")
             {
                 html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
             }

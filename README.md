@@ -26,3 +26,12 @@ Progress updates on this project will be presented roughly every three weeks on 
 * nltk 3.7
 * torch 1.11.0
 * flask 2.1.3
+
+
+### To-Do
+add more intents <br>
+-> how are you - extra <br>
+-> what can you do? <br>
+-> what is your name, about you <br>
+create data visualizations <br>
+implement data visualizations on website <br>
