@@ -34,7 +34,6 @@ class Chatbox {
 
 
     toggleState(chatbox) {
-
         // change state
         this.state = !this.state;
 
@@ -59,7 +58,7 @@ class Chatbox {
 
         // send text to bot as dict (object in js)
         // message key is same as in app.py
-        let message1 = { name: "User", message: text1 }
+        let message1 = { name: "User", message: text1 };
         this.messages.push(message1);
 
         // hardcode: http://127.0.0.1:5000/predict
@@ -86,7 +85,7 @@ class Chatbox {
             textField.value = ''
 
         }).catch((error) => {
-            console.error('Error:', error);
+            console.error('oh no, an error:', error);
             this.updateChatText(chatbox)
             textField.value = ''
         });
@@ -96,7 +95,7 @@ class Chatbox {
         var html = '';
 
         // go over all messages and modify inner html code
-        this.message.slice().reverse().forEach(function(item, index) {
+        this.messages.slice().reverse().forEach(function(item, index) {
             if (item.name === "Aria")
             {
                 html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'

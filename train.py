@@ -3,7 +3,11 @@ import json
 import numpy as np
 from preprocessing import preprocess, bag_of_words
 
-os.chdir("Embodied-Conversational-Agent")
+try:
+    os.chdir("Embodied-Conversational-Agent")
+except:
+    pass
+
 with open('intents.json', 'r') as f:
     intents = json.load(f)
 
