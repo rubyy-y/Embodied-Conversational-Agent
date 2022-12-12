@@ -52,3 +52,62 @@ all = stats['all']
 keyboardMouse = stats['keyboardMouse']
 gamepad = stats['gamepad']
 touch = stats['touch']
+
+
+def get_data(key):
+    data = us['data']
+    account = data['account']
+    battlePass = data['battlePass']
+
+    id = account['id']
+    name = account['name']
+    level = battlePass['level']
+    progress = battlePass['progress']
+
+    if key == 'id':
+        return id
+    elif key == 'name':
+        return name
+    elif key == 'level':
+        return level
+    elif key == 'progress':
+        return progress
+    else:
+        return "enter valid key: 'id', 'name', 'level', 'progress'"
+
+
+def get_stats(method, mode):
+    data = us['data']
+    stats = data['stats']
+
+    if method == 'all':
+        key = stats['all']
+    elif method == 'keyboardMouse':
+        key = stats['keyboardMouse']
+    elif method == 'gamepad':
+        key = stats['gamepad']
+    elif method == 'touch':
+        key = stats['touch']
+    else:
+        return "enter valid method: 'all', 'keyboardMouse', 'gamepad', 'touch'"
+
+    if mode == 'overall':
+        return key['overall']
+    elif mode == 'solo':
+        return key['solo']
+    elif mode == 'duo':
+        return key['duo']
+    elif mode == 'squad':
+        return key['squad']
+    elif mode == 'ltm':
+        return key['ltm']
+    else:
+        return "enter valid mode: 'overall', 'solo', 'duo', 'squad', 'ltm'"
+
+
+# def get_stat_detail(method, mode, detail):
+#     summary = get_stats(method, mode)
+
+#     if detail == #TODO
+
+# print(get_data('name'))

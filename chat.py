@@ -31,13 +31,8 @@ model.eval()
 
 # Create Chat
 bot_name = "Aria"
-# print("Chat is now open. Type 'exit' to exit.")
 
 def get_response(sentence):
-    # sentence = input('You: ')
-    # if sentence == "exit":
-    #     break
-
     sentence = preprocess(sentence)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
@@ -46,19 +41,18 @@ def get_response(sentence):
     output = model(X)
     _, predicted = torch.max(output, dim=1)
     tag = tags[predicted.item()]
+    # TODO - yield tag to perform alteration 
 
-    # TODO - if unsure ... softmax
+    # if unsure ... softmax
     probabilities = torch.softmax(output, dim=1)
     probability = probabilities[0][predicted.item()]
     
     if probability > 0.8:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                # print(f"{bot_name}: {random.choice(intent['responses'])}")
-                return random.choice(intent['responses'])
+                return random.choice(intent['responses']), tag
     
     else:
-        # print(f"{bot_name}: I'm sorry, I do not understand that yet. Could you reformulate your request?")
         return "I'm sorry, I do not understand that yet. Could you reformulate your request?"
 
 
@@ -69,5 +63,5 @@ if __name__ == "__main__":
         if sentence == "exit":
             break
 
-        response = get_response(sentence)
+        response, tag = get_response(sentence)
         print(f"{bot_name}: {response}")
