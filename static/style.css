@@ -220,7 +220,7 @@ body {
 .static_widget {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto auto auto;
     gap: 1.6rem;
 }
 
