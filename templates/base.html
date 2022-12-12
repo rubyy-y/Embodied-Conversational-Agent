@@ -8,16 +8,39 @@
 </head>
 <body>
 <div class="container">
+    
+    <!-- Dashboard -->
     <div class="heading">
         <h1>Game Statistics Dashboard</h1>
     </div>
     <div class="dashboard">
         <div class="static_widget">
-            <div class="static_widget_header"># Headshots</div>
-            <div class="value">67</div>
+            <div class="headshots">
+                <h3 class="widget_header"># Headshots</h3>
+                <h1 class="value">684</h1>
+            </div>
+
+            <div class="kd">
+                <h3 class="widget_header">K/D-Rate</h3>
+                <h1 class="value">49</h1>
+            </div>
+
+            <div class="performance">
+                <h3 class="widget_header">Performance</h3>
+                <h1 class="value">/</h1>
+            </div>
+            
+        <div class="plot">
+            <div class="widget">
+                <h3 class="widget_header">Plot</h3>
+                <img src="../static/images/statistic.png" alt="performance" width="200">
+            </div>
+        </div>
+
         </div>
     </div>
 
+    <!-- Chat Box -->
     <div class="chatbox">
         <div class="chatbox__support">
             <div class="chatbox__header">
@@ -38,7 +61,7 @@
             </div>
         </div>
         <div class="chatbox__button">
-            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon_blue.svg') }}" /></button>
         </div>
     </div>
 </div>

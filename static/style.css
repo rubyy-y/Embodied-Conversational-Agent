@@ -8,7 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     font-weight: 400;
     font-size: 100%;
-    background: #f0eded;
+    background: #D2D4DA;
 }
 
 *, html {
@@ -16,12 +16,16 @@ body {
     --secondaryGradient: linear-gradient(268.91deg, #543f37 -2.14%, #967E76 99.69%);
     --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-    --colordark: #543f37;
-    --colormid: #846d65;
-    --colorlight: #e8e0e0;
+    --colordark: #5B5D6B;
+    --colormid: #B3B5BD;
+    --colorlight: #F3F4F8;
     --accentcolor1: #A3C7D6;
+    --accentcolor1_dark: #427e97;
     --accentcolor2: #9F73AB;
+    --accentcolor2_dark: #5c3467;
     --accentcolor3: #624F82;
+    --accentcolor3_dark: #39245f;
+    --gradient: linear-gradient(93.12deg, var(--accentcolor1) 0.52%, var(--accentcolor1_dark) 100%);
 }
 
 /* CHATBOX */
@@ -57,7 +61,7 @@ body {
 
 .send__button {
     padding: 6px;
-    background: #765e55;
+    background: var(--accentcolor1);
     border: 2px;
     border-radius: 20px;
     padding: 10px 10px;
@@ -66,7 +70,7 @@ body {
 }
 
 .send__button:hover {
-    background-color: #8c756b;
+    background-color: var(--colormid);
     padding: 10px 10px;
     border-radius: 30px;
 }
@@ -104,7 +108,7 @@ body {
 /* HEADER */
 .chatbox__header {
     position: sticky;
-    background: var(--primaryGradient);
+    background: var(--gradient);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -136,7 +140,7 @@ body {
 
 .messages__item {
     margin-top: 10px;
-    background: var(--colorlight);
+    background: var(--colormid);
     padding: 8px 12px;
     max-width: 70%;
 }
@@ -165,7 +169,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 20px;
-    background: var(--secondaryGradient);
+    background: var(--gradient);
     box-shadow: var(--secondaryBoxShadow);
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -215,25 +219,46 @@ body {
 /* static widget */
 .static_widget {
     position: relative;
-    display: inline-block;
-    background-color: var(--colormid);
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
 }
 
-.static_widget_header {
-    color: var(--colorlight);
+.static_widget > div{
+    background: var(--colorlight);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 1rem;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease;
+}
+
+.static_widget > div:hover{
+    box-shadow: none;
+}
+
+.widget_header {
+    color: var(--colormid);
     font-size: 170%;
     font-weight: bolder;
     text-align: center;
 }
 
-.value {
+.static_widget > div .value{    /* .value */
     color: var(--accentcolor2);
-    -webkit-text-stroke: 2px var(--colordark);
     font-size: 300%;
     font-weight: 800;
     text-align: center;
     padding-top: 20px
+}
+
+.plot{
+    position: relative;
+    display: block;
+    background: var(--colorlight);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 1rem;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease;
 }
