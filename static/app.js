@@ -118,6 +118,18 @@ const user = userName.querySelector('input');
             if (key === "Enter") {
                 username = document.getElementById('username').value
                 console.log(username)
+
+                fetch($SCRIPT_ROOT + '/username', {
+                        method: 'POST',
+                        body: JSON.stringify({ username: username }),
+                        mode: 'cors',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                    })
+                    // extract json and display
+                    // .then (r => r.json())
+
                 document.getElementById('username').value = ''
             }
         })

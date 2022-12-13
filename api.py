@@ -6,7 +6,10 @@ key = 'e3b9db5e-0368-41a1-966f-5bee6a63ec84'
 def exists(username):
     url = f"https://fortnite-api.com/v2/stats/br/v2?name={username}"
     quest = json.loads(requests.get(url, headers={'Authorization': key}).content)
-    return quest['status'] == 200
+    if quest['status'] == 200:
+        return f"viewing profile of {username}"
+    else:
+        return "This user does not exist."
 
 def user_stats(username):
     url = f"https://fortnite-api.com/v2/stats/br/v2?name={username}"
@@ -56,7 +59,9 @@ def user_stats(username):
 # gamepad = stats['gamepad']
 # touch = stats['touch']
 
-input = input('Input user name: ')
+# input = input('Input user name: ')
+input = 'p-six'
+
 if not exists(input):
     raise KeyError('User does not Exist!')
 else:
