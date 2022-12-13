@@ -3,12 +3,15 @@ import requests
 
 key = 'e3b9db5e-0368-41a1-966f-5bee6a63ec84'
 
+def exists(username):
+    url = f"https://fortnite-api.com/v2/stats/br/v2?name={username}"
+    quest = json.loads(requests.get(url, headers={'Authorization': key}).content)
+    return quest['status'] == 200
+
 def user_stats(username):
     url = f"https://fortnite-api.com/v2/stats/br/v2?name={username}"
     quest = json.loads(requests.get(url, headers={'Authorization': key}).content)
     return quest
-
-us = user_stats(username="p-six")
 
 
 #### DATA EXPLORATION ####
@@ -36,22 +39,28 @@ us = user_stats(username="p-six")
                 # >>> squad (dict):   ['score', 'scorePerMin', 'scorePerMatch', 'wins', 'top3', 'top6', 'kills', 'killsPerMin', 'killsPerMatch', 'deaths', 'kd', 'matches', 'winRate', 'minutesPlayed', 'playersOutlived', 'lastModified']
                 # >>> ltm (dict):     ['score', 'scorePerMin', 'scorePerMatch', 'wins', 'kills', 'killsPerMin', 'killsPerMatch', 'deaths', 'kd', 'matches', 'winRate', 'minutesPlayed', 'playersOutlived', 'lastModified']
 
-status = us['status']
-data = us['data']
+# status = us['status']
+# data = us['data']
 
-account = data['account']
-battlePass = data['battlePass']
-image = data['image']
-stats = data['stats']
+# account = data['account']
+# battlePass = data['battlePass']
+# image = data['image']
+# stats = data['stats']
 
-id = account['id']
-name = account['name']
-level = battlePass['level']
-progress = battlePass['progress']
-all = stats['all']
-keyboardMouse = stats['keyboardMouse']
-gamepad = stats['gamepad']
-touch = stats['touch']
+# id = account['id']
+# name = account['name']
+# level = battlePass['level']
+# progress = battlePass['progress']
+# all = stats['all']
+# keyboardMouse = stats['keyboardMouse']
+# gamepad = stats['gamepad']
+# touch = stats['touch']
+
+input = input('Input user name: ')
+if not exists(input):
+    raise KeyError('User does not Exist!')
+else:
+    us = user_stats(username=input)
 
 
 def get_data(key):
@@ -74,7 +83,6 @@ def get_data(key):
         return progress
     else:
         return "enter valid key: 'id', 'name', 'level', 'progress'"
-
 
 def get_stats(method, mode):
     data = us['data']
@@ -104,10 +112,3 @@ def get_stats(method, mode):
     else:
         return "enter valid mode: 'overall', 'solo', 'duo', 'squad', 'ltm'"
 
-
-# def get_stat_detail(method, mode, detail):
-#     summary = get_stats(method, mode)
-
-#     if detail == #TODO
-
-# print(get_data('name'))
