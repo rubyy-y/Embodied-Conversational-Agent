@@ -14,15 +14,16 @@ def predict():
     text = request.get_json(force=True).get("message")
     response = get_response(text)
     message = {"answer": response[0]}
+    # print(response[0])
     return jsonify(message)
 
 @app.post("/username")
 def username():
     username = request.get_json(force=True).get("username")
     existing = exists(username)
-    message = {"status": existing}
+    status = {"status": existing}
     # print(existing)
-    return jsonify(message)
+    return jsonify(status)
 
 if __name__ == "__main__":
     app.run()

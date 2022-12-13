@@ -73,11 +73,12 @@ class Chatbox {
                 'Content-Type': 'application/json'
             },
         })
+        
         // extract json and display
-        .then (r => r.json())
-        .then (r => {
+        .then (response => response.json())
+        .then (response => {
             // answer key as in python
-            let message2 = { name: "Aria", message: r.answer };
+            let message2 = { name: "Aria", message: response.answer };
             this.messages.push(message2);
 
             // updates chat text
@@ -112,6 +113,8 @@ class Chatbox {
 
 }
 
+const exists_notification = document.getElementById("username_display");
+
 userName = document.querySelector('.username')
 const user = userName.querySelector('input');
         user.addEventListener("keyup", ({key}) => {
@@ -127,12 +130,18 @@ const user = userName.querySelector('input');
                             'Content-Type': 'application/json'
                         },
                     })
+
                     // extract json and display
-                    // .then (r => r.json())
+                    .then(response => response.json())
+                    .then (response => {
+                        exists_notification.innerHTML = response.status;
+                    })
+                
 
                 document.getElementById('username').value = ''
             }
         })
+
 
 const chatbox = new Chatbox();
 chatbox.display();
