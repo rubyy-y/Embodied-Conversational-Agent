@@ -53,7 +53,7 @@ def get_response(sentence):
                 return random.choice(intent['responses']), tag
     
     else:
-        return "I'm sorry, I do not understand that yet. Could you reformulate your request?"
+        return ("I'm sorry, I do not understand that yet. Could you reformulate your request?", None)
 
 
 if __name__ == "__main__":

@@ -11,8 +11,8 @@ def index():
 @app.post("/predict")
 def predict():
     text = request.get_json(force=True).get("message")
-    response, tag = get_response(text)
-    message = {"answer": response}
+    response = get_response(text)
+    message = {"answer": response[0]}
     return jsonify(message)
 
 if __name__ == "__main__":

@@ -112,5 +112,15 @@ class Chatbox {
 
 }
 
+userName = document.querySelector('.username')
+const user = userName.querySelector('input');
+        user.addEventListener("keyup", ({key}) => {
+            if (key === "Enter") {
+                username = document.getElementById('username').value
+                console.log(username)
+                document.getElementById('username').value = ''
+            }
+        })
+
 const chatbox = new Chatbox();
 chatbox.display();
