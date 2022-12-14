@@ -73,12 +73,18 @@ def get_stats(username, data, stats_key='all', type='solo'):
             if not data in list(stats[stats_key][type]):
                 raise KeyError("Enter valid type of data.")
             
+            # TODO - if data is minutesPlayed, we want full time
+            # if data == "minutesPlayed":
+                # time = stats[stats_key][type]['minutesPlayed']
+                # days = time//1440
+                # hours = mins//60
+                # not correct yet
+                # return f"{days}D {hours}H {minutes}M"
+
             # if it is, return data
             else:
                 # print(stats[stats_key][type][data])
                 return stats[stats_key][type][data]
-
-
 
 # __________________________________________________________________________________________
 #### DATA STRUCTURE ####
@@ -124,3 +130,16 @@ def get_stats(username, data, stats_key='all', type='solo'):
                 #                      'kills', 'killsPerMin', 'killsPerMatch', 'deaths',
                 #                      'kd', 'matches', 'winRate', 'minutesPlayed', 
                 #                      'playersOutlived', 'lastModified']
+# __________________________________________________________________________________________
+
+# def news():
+#     news_url = "https://fortnite-api.com/v2/news"
+#     news = json.loads(requests.get(news_url, headers={'Authorization': key}).content)
+#     br = news['data']['br']
+#     stw = news['data']['stw']
+#     creative = news['data']['creative']
+
+#     print(list(br))
+#     return list(br)
+
+# news()

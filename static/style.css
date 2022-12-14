@@ -208,7 +208,7 @@ body {
     color: var(--colordark);
     -webkit-text-stroke: 2px var(--colordark);
     padding: 70px;
-    font-size: 170%;
+    font-size: 200%;
 }
 
 .dashboard {
@@ -241,23 +241,18 @@ body {
 
 /* widgets */
 
-.headshots { grid-area: headshots; }
-.kd { grid-area: kd; }
-.performance { grid-area: performance; }
-.plot { grid-area: plot; }
-
-.widget_header {
-    color: var(--colormid);
-    font-size: 170%;
-    font-weight: bolder;
-    text-align: center;
-}
+.minutes { grid-area: t; }
+.matches { grid-area: m; }
+.widget1 { grid-area: w1; }
+.widget2 { grid-area: w2; }
+.widget3 { grid-area: w3; }
+.widget4 { grid-area: w4; }
 
 .widgets {
     display: grid;
     grid-template-areas: 
-        'headshots kd performance'
-        'plot plot plot';
+        'm m m m t t t t'
+        'w1 w1 w3 w3 w4 w4 w2 w2';
     gap: 25px;
 }
 
@@ -274,6 +269,13 @@ body {
     box-shadow: none;
 }
 
+.widget_header {
+    color: var(--colormid);
+    font-size: 200%;
+    font-weight: bolder;
+    text-align: center;
+}
+
 .widgets > div .value{    /* .value */
     color: var(--accentcolor2);
     font-size: 300%;
@@ -281,4 +283,3 @@ body {
     text-align: center;
     padding-top: 20px
 }
-

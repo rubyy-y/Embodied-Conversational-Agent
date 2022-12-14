@@ -1,6 +1,8 @@
 # use get_response only tempotarily to mimic behaviour of function
 from chat import get_response
 
+import numpy as np
+import plotly
 from api import get_user_data, get_stats
 
 # idea of this file: handle arias tags after in get_response in app.py predict()
@@ -29,5 +31,4 @@ def widget(tag): # response[1]
         div = { "header": tag, "value": get_stats(username, data) }
         return div
 
-
-# print(get_stats('p-six', 'minutesPlayed'))
+print(get_stats('p-six', 'matches'))
