@@ -253,7 +253,7 @@ body {
     text-align: center;
 }
 
-.widget {
+.widgets {
     display: grid;
     grid-template-areas: 
         'headshots kd performance'
@@ -261,7 +261,7 @@ body {
     gap: 25px;
 }
 
-.widget > div {
+.widgets > div {
     background: var(--colorlight);
     text-align: center;
     padding: 25px;
@@ -270,11 +270,11 @@ body {
     transition: all 300ms ease;
 }
 
-.widget > div:hover{
+.widgets > div:hover{
     box-shadow: none;
 }
 
-.widget > div .value{    /* .value */
+.widgets > div .value{    /* .value */
     color: var(--accentcolor2);
     font-size: 300%;
     font-weight: 800;

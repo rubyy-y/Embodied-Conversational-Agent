@@ -85,7 +85,7 @@
       {
         "tag": "topk",
         "patterns": [
-          "?..."
+          "topk"
         ],
         "responses": [
           "You asked about the topK."
@@ -221,7 +221,9 @@
         "patterns": [
           "Tell me a joke!",
           "Tell me something funny!",
-          "Do you know a joke?"
+          "Do you know a joke?",
+          "can you be funny?",
+          "joke"
         ],
         "responses": [
           "Why did the hipster burn his mouth? He drank the coffee before it was cool.",

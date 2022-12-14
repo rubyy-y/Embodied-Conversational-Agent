@@ -85,7 +85,12 @@ class Chatbox {
             this.updateChatText(chatbox)
             textField.value = ''
 
-        }).catch((error) => {
+        })
+        // .then (response => {
+        //     const header1 = document.getElementById("header1")
+        //     header1.innerHTML = response.header;
+        // })
+        .catch((error) => {
             console.error('oh no, an error:', error);
             this.updateChatText(chatbox)
             textField.value = ''
