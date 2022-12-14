@@ -18,6 +18,8 @@ Progress updates on this project will be presented roughly every three weeks on 
 * app.js - JavaScript for app
 * base.html - base template
 * style.css - styling
+* api.py - Fortnite API; data fetching
+* widgets.py - generate widgets for html
 
 ## Important Package Versions
 * python 3.10.4
@@ -29,9 +31,8 @@ Progress updates on this project will be presented roughly every three weeks on 
 
 
 ### To-Do
-add more intents <br>
--> how are you - extra <br>
+add some intents <br>
 -> what can you do? <br>
 -> what is your name, about you <br>
-create data visualizations <br>
-implement data visualizations on website <br>
+-> player specific questions <br>
+create data visualizations on website <br>
