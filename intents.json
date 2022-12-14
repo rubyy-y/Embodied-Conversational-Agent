@@ -14,9 +14,9 @@
           "yo"
         ],
         "responses": [
-          "Hey :)",
+          "Hey :) How can I help?",
           "Hi there, what can I do for you?",
-          "Hello there, how can I help?"
+          "Hello, how can I help?"
         ]
       },
       {
@@ -34,6 +34,112 @@
         "responses": ["Happy to help!", "Any time!", "My pleasure"]
       },
       {
+        "tag": "score",
+        "patterns": [
+          "whats my score?",
+          "how did i score?",
+          "how did i do?",
+          "score"
+        ],
+        "responses": [
+          "You asked about your score."
+        ]
+      },
+      {
+        "tag": "scorePerMin",
+        "patterns": [
+          "whats my score per minute?",
+          "what did i score in a minute?",
+          "what is my score per minute?",
+          "what is my score in a min?",
+          "score per min"
+        ],
+        "responses": [
+          "You asked about your score per minute."
+        ]
+      },
+      {
+        "tag": "scorePerMatch",
+        "patterns": [
+          "whats my score per match?",
+          "what do i score in matches?",
+          "what is my score per match?",
+          "score per match"
+        ],
+        "responses": [
+          "You asked about your score per match."
+        ]
+      },
+      {
+        "tag": "wins",
+        "patterns": [
+          "what are my wins",
+          "how many times did i win?",
+          "how many wins do i have?",
+          "wins"
+        ],
+        "responses": [
+          "You asked about your wins."
+        ]
+      },
+      {
+        "tag": "topk",
+        "patterns": [
+          "?..."
+        ],
+        "responses": [
+          "You asked about the topK."
+        ]
+      },
+      {
+        "tag": "kills",
+        "patterns": [
+          "how many players did i kill?",
+          "how many have i killed?",
+          "show me how many i have ended.",
+          "kills"
+        ],
+        "responses": [
+          "You asked about your kills."
+        ]
+      },
+      {
+        "tag": "killsPerMin",
+        "patterns": [
+          "how many players did i kill in a minute?",
+          "how many have i killed on average?",
+          "show me how many i have ended every minute.",
+          "kills per minute"
+        ],
+        "responses": [
+          "You asked about your kills per minute."
+        ]
+      },
+      {
+        "tag": "killsPerMatch",
+        "patterns": [
+          "how many players did i kill in this match?",
+          "how many have i killed this match?",
+          "show me how many i have ended in this game.",
+          "kills per match"
+        ],
+        "responses": [
+          "You asked about your kills per match."
+        ]
+      },
+      {
+        "tag": "deaths",
+        "patterns": [
+          "how many times did i die?",
+          "how often did i die?",
+          "show me how many times i have died.",
+          "deaths"
+        ],
+        "responses": [
+          "You asked for your deaths."
+        ]
+      },
+      {
         "tag": "kd",
         "patterns": [
           "can you tell me about my average kd rate?",
@@ -41,8 +147,6 @@
           "show me my kd",
           "how is my kd?",
           "what is my kill death rate?",
-          "how many times did i die?",
-          "how many players have I ended?",
           "kill death ratio",
           "what is my k/d?",
           "kd"
@@ -52,29 +156,50 @@
         ]
       },
       {
-        "tag": "headshots",
+        "tag": "matches",
         "patterns": [
-          "how many headshots did i score?",
-          "show me my headshots",
-          "how many headshots did i give?",
-          "tell me about the number of head shots i gave.",
-          "headshots"
+          "how many matches have i played?",
+          "show me the numer of matches i played",
+          "tell me about the number of maches i have played.",
+          "matches"
         ],
         "responses": [
-          "You asked about the number of Headshots."
+          "You asked about the matches."
         ]
       },
       {
-        "tag": "win rate",
+        "tag": "winRate",
         "patterns": [
-          "what was my last win rate?",
+          "what was my win rate?",
           "show me my win rate",
-          "what was my winrate?",
-          "how many times did i win?",
+          "what is my winrate?",
           "win rate"
         ],
         "responses": [
           "You asked about the win-rate."
+        ]
+      },
+      {
+        "tag": "minutesPlayed",
+        "patterns": [
+          "how much thime did i spen on this game?",
+          "how many minutes did i play this?",
+          "show me much time i spent playing.",
+          "minutes played"
+        ],
+        "responses": [
+          "You asked about your kills."
+        ]
+      },
+      {
+        "tag": "playersOutlived",
+        "patterns": [
+          "how many players did i outlive?",
+          "how many have i outlived?",
+          "players outlived"
+        ],
+        "responses": [
+          "You asked about your kills."
         ]
       },
       {
@@ -85,7 +210,6 @@
           "show me my performance",
           "all of my statistics",
           "what are my stats?",
-          "they didnt stand a chance, right?",
           "performance"
         ],
         "responses": [
