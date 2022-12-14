@@ -206,14 +206,21 @@ body {
 .heading {
     text-align: center;
     color: var(--colordark);
+    text-shadow: 2px 2px 3px black;
     -webkit-text-stroke: 2px var(--colordark);
     padding: 70px;
+    padding-right: 380px; /* 450-70 */
+    padding-left: 120px;
     font-size: 200%;
+}
+
+.heading:hover {
+    cursor: default;
 }
 
 .dashboard {
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 450px;
 }
 
 .username input {
@@ -267,17 +274,20 @@ body {
 
 .widgets > div:hover{
     box-shadow: none;
+    cursor: default;
 }
 
 .widget_header {
     color: var(--colormid);
+    text-shadow: 1px 1px 1px var(--colordark);
     font-size: 200%;
     font-weight: bolder;
     text-align: center;
 }
 
 .widgets > div .value{    /* .value */
-    color: var(--accentcolor2);
+    color: var(--accentcolor1);
+    text-shadow: 2px 2px 2px var(--accentcolor1_dark);
     font-size: 300%;
     font-weight: 800;
     text-align: center;
