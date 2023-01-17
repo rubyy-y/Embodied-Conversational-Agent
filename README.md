@@ -19,7 +19,6 @@ Progress updates on this project will be presented roughly every three weeks on 
 * base.html - base template
 * style.css - styling
 * api.py - Fortnite API; data fetching
-* widgets.py - generate widgets for html
 
 ## Important Package Versions
 * python 3.10.4
@@ -29,10 +28,9 @@ Progress updates on this project will be presented roughly every three weeks on 
 * torch 1.11.0
 * flask 2.1.3
 
-
 ### To-Do
-add some intents <br>
+modify intents <br>
 -> what can you do? <br>
 -> what is your name, about you <br>
--> player specific questions <br>
-create data visualizations on website <br>
+-> player specific questions? <br>
+-> create data visualizations on website (https://www.canva.com/graphs/) <br>

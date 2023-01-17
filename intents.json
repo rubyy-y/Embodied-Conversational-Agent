@@ -190,7 +190,7 @@
           "minutes played"
         ],
         "responses": [
-          "You asked about your kills."
+          "You asked about your how many minutes you have played."
         ]
       },
       {
@@ -201,7 +201,7 @@
           "players outlived"
         ],
         "responses": [
-          "You asked about your kills."
+          "You asked about your how many players you outlived."
         ]
       },
       {

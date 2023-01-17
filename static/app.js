@@ -87,14 +87,20 @@ class Chatbox {
 
             // highlight corresponding widget
             let tag = response.tag;
+            const plot_options = ["wins", "minutesPlayed", "performance"]
+            if (plot_options.includes(tag)) {
+
+                // console.log(tag)
+                const plot = document.getElementById("plot");
+                plot.innerHTML = "<img src='../static/plots/" + tag + ".png' height='300'></img>"
+            }
+
             tag += '_wid'
             const wid = document.getElementById(tag);
             
             // console.log(tag)
             wid.style.background = "#5B5D6B";
             setTimeout(() => { wid.style.background = "#F3F4F8"; }, 1500);
-            
-
         })
         .catch((error) => {
             // console.error('oh no, an error:', error);

@@ -1,0 +1,12 @@
+plot generateion using https://www.canva.com/graphs/
+size refecence: 2100 x 700 | 3:1
+
+
+1. Performance Graph:
+line plot + average performance
+
+2. Session Lengths:
+
+
+3. Comparision to average User: (head to head)
+Bar plots

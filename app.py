@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 from chat import get_response
 from api import exists, get_stats
-from widgets import widget
+
+# import json
+# import plotly
+# import plotly.express as px
+# import plots
 
 app = Flask(__name__)
 app.debug = True
@@ -53,6 +57,13 @@ def username():
                 "kd": kd}
 
     return jsonify(user)
+
+# @app.post("/plot")
+# def plot():
+#     df = plots.df
+#     fig = plots.fig
+#     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+#     return render_template(graphJSON=graphJSON)
 
 
 if __name__ == "__main__":
