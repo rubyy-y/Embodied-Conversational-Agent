@@ -254,12 +254,14 @@ body {
 .widget2 { grid-area: w2; }
 .widget3 { grid-area: w3; }
 .widget4 { grid-area: w4; }
+.plot { grid-area: p; }
 
 .widgets {
     display: grid;
     grid-template-areas: 
         'm m m m t t t t'
-        'w1 w1 w3 w3 w4 w4 w2 w2';
+        'w1 w1 w3 w3 w4 w4 w2 w2'
+        'p p p p p p p p';
     gap: 25px;
 }
 

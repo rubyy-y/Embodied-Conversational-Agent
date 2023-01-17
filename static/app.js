@@ -85,13 +85,19 @@ class Chatbox {
             this.updateChatText(chatbox)
             textField.value = ''
 
+            // highlight corresponding widget
+            let tag = response.tag;
+            tag += '_wid'
+            const wid = document.getElementById(tag);
+            
+            // console.log(tag)
+            wid.style.background = "#5B5D6B";
+            setTimeout(() => { wid.style.background = "#F3F4F8"; }, 1500);
+            
+
         })
-        // .then (response => {
-        //     const header1 = document.getElementById("header1")
-        //     header1.innerHTML = response.header;
-        // })
         .catch((error) => {
-            console.error('oh no, an error:', error);
+            // console.error('oh no, an error:', error);
             this.updateChatText(chatbox)
             textField.value = ''
         });
@@ -131,7 +137,7 @@ const user = userName.querySelector('input');
         user.addEventListener("keyup", ({key}) => {
             if (key === "Enter") {
                 username = document.getElementById('username').value
-                console.log(username)
+                // console.log(username)
 
                 fetch($SCRIPT_ROOT + '/username', {
                         method: 'POST',

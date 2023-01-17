@@ -15,25 +15,24 @@ def index():
 def predict():
     text = request.get_json(force=True).get("message")
     response = get_response(text)
-    message = {"answer": response[0]}
-    # print(response[0])
+    message = {"answer": response[0],
+                "tag": response[1]}
+    # print(response[1])
     return jsonify(message)
-
-# def widgets():
-#     text = request.get_json(force=True).get("message")
-#     tag = get_response(text)[1]
-#     div = widget(tag)
-#     # div = {'header': tag, 'value': value}
-#     print(tag)
-#     return jsonify(div)
 
 
 @app.post("/username")
 def username():
     username = request.get_json(force=True).get("username")
     existing = exists(username)
-    # status = {"status": existing}
-    user = {"status": existing}
+    # user = {"status": existing}
+    user = {"status": existing,
+                "matches": '-',
+                "minutesPlayed": '-',
+                "wins": '-',
+                "winRate": '-',
+                "kills": '-',
+                "kd": '-'}
 
     # if user does exist
     if existing.startswith("viewing"):
@@ -53,9 +52,8 @@ def username():
                 "kills": kills,
                 "kd": kd}
 
-    # return jsonify(status)
-    # print(user)
     return jsonify(user)
+
 
 if __name__ == "__main__":
     app.run()
