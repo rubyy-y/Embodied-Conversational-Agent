@@ -119,6 +119,12 @@ class Chatbox {
 }
 
 const exists_notification = document.getElementById("username_display");
+const matches = document.getElementById("matches");
+const minutesPlayed = document.getElementById("minutesPlayed");
+const wins = document.getElementById("wins");
+const winRate = document.getElementById("winRate");
+const kills = document.getElementById("kills");
+const kd = document.getElementById("kd");
 
 userName = document.querySelector('.username')
 const user = userName.querySelector('input');
@@ -140,6 +146,12 @@ const user = userName.querySelector('input');
                     .then(response => response.json())
                     .then (response => {
                         exists_notification.innerHTML = response.status;
+                        matches.innerHTML = response.matches;
+                        minutesPlayed.innerHTML = response.minutesPlayed;
+                        wins.innerHTML = response.wins;
+                        winRate.innerHTML = response.winRate;
+                        kills.innerHTML = response.kills;
+                        kd.innerHTML = response.kd;
                     })
                 
 

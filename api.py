@@ -7,9 +7,13 @@ def exists(username):
     url = f"https://fortnite-api.com/v2/stats/br/v2?name={username}"
     quest = json.loads(requests.get(url, headers={'Authorization': key}).content)
     if quest['status'] == 200:
-        return f"viewing profile of {username}"
-    else:
-        return "This user does not exist."
+        return f"viewing profile of {username}."
+    if quest['status'] == 400:
+        return "Invalid or missing parameter(s)."
+    if quest['status'] == 403:
+        return "Account stats are private."
+    if quest['status'] == 404:
+        return "This user does not exist or has no stats."
 
 
 def user_stats(username):
@@ -74,14 +78,17 @@ def get_stats(username, data, stats_key='all', type='solo'):
                 raise KeyError("Enter valid type of data.")
             
             # TODO - if data is minutesPlayed, we want full time
-            # if data == "minutesPlayed":
-                # time = stats[stats_key][type]['minutesPlayed']
-                # days = time//1440
-                # hours = mins//60
-                # not correct yet
-                # return f"{days}D {hours}H {minutes}M"
+            if data == "minutesPlayed":
+                time = stats[stats_key][type]['minutesPlayed']
+                days = time//1440
+                time -= days*1440
+                hours = time//60
+                time -= hours*60
+                minutes = time
 
-            # if it is, return data
+                return f"{days}D {hours}H {minutes}M"
+
+            # if it is available, return data
             else:
                 # print(stats[stats_key][type][data])
                 return stats[stats_key][type][data]
@@ -143,3 +150,17 @@ def get_stats(username, data, stats_key='all', type='solo'):
 #     return list(br)
 
 # news()
+
+
+# ___________________
+# ___example usage___
+
+# username = 'p-six'
+# matches = get_stats(username, 'matches')
+# minutesPlayed = get_stats(username, 'minutesPlayed')
+# wins = get_stats(username, 'wins')
+# winRate = get_stats(username, 'winRate')
+# kills = get_stats(username, 'kills')
+# kd = get_stats(username, 'kd')
+
+# print(username, matches, minutesPlayed, wins, winRate, kills, kd)
