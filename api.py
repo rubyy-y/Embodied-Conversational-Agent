@@ -49,12 +49,12 @@ def get_user_data(username, info):
             return data['battlePass']['progress']
 
 
-def get_stats(username, data, stats_key='all', type='solo'):
+def get_stats(username, data, stats_key='all', type='overall'):
     """
     method returns given statistic for username
     username: name of user
     stats_key: ['all', 'keyboardMouse', 'gamepad', 'touch'] // def. 'all'
-    type: ['overall', 'solo', 'duo', 'trio', 'squad', 'ltm'] // def. 'solo'
+    type: ['overall', 'solo', 'duo', 'trio', 'squad', 'ltm'] // def. 'overall'
     data: type of statistic
 
     """

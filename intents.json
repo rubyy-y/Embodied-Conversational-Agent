@@ -20,6 +20,18 @@
         ]
       },
       {
+        "tag": "who",
+        "patterns": [
+          "who are you?",
+          "what can you do?",
+          "what is your purpose?",
+          "what are you?"
+        ],
+        "responses": [
+          "My name is Aria, short for 'Artificial Responsive Intelligent Agent'. You can enter your username and ask me things about your Game Statistics."
+        ]
+      },
+      {
         "tag": "goodbye",
         "patterns": ["bye", "see you later", "goodbye"],
         "responses": [

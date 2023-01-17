@@ -164,6 +164,9 @@ const user = userName.querySelector('input');
                         winRate.innerHTML = response.winRate;
                         kills.innerHTML = response.kills;
                         kd.innerHTML = response.kd;
+
+                        const plot = document.getElementById("plot");
+                        plot.innerHTML = "<img src='../static/plots/empty_plot.png' height='300'></img>"
                     })
                 
 
