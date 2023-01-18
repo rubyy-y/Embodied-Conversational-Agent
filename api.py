@@ -155,7 +155,7 @@ def get_stats(username, data, stats_key='all', type='overall'):
 # ___________________
 # ___example usage___
 
-# username = 'p-six'
+username = 'p-six'
 # matches = get_stats(username, 'matches')
 # minutesPlayed = get_stats(username, 'minutesPlayed')
 # wins = get_stats(username, 'wins')

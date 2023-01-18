@@ -87,7 +87,9 @@ class Chatbox {
 
             // highlight corresponding widget
             let tag = response.tag;
-            const plot_options = ["wins", "minutesPlayed", "performance"]
+            const plot_options = ["wins", "minutesPlayed", "performance", "kills", "deaths", "kd", 
+                                "matches", "winRate", "scorePerMin", "scorePerMatch", "score", 
+                                "killsPerMin", "killsPerMatch", "playersOutlived"]
             if (plot_options.includes(tag)) {
 
                 // console.log(tag)
