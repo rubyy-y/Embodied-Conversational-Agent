@@ -2,11 +2,6 @@ from flask import Flask, render_template, request, jsonify
 from chat import get_response
 from api import exists, get_stats
 
-# import json
-# import plotly
-# import plotly.express as px
-# import plots
-
 app = Flask(__name__)
 app.debug = True
 
