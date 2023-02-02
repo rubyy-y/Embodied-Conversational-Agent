@@ -16,7 +16,6 @@ def predict():
     response = get_response(text)
     message = {"answer": response[0],
                 "tag": response[1]}
-    # print(response[1])
     return jsonify(message)
 
 
@@ -24,7 +23,6 @@ def predict():
 def username():
     username = request.get_json(force=True).get("username")
     existing = exists(username)
-    # user = {"status": existing}
     user = {"status": existing,
                 "matches": '-',
                 "minutesPlayed": '-',
@@ -52,13 +50,6 @@ def username():
                 "kd": kd}
 
     return jsonify(user)
-
-# @app.post("/plot")
-# def plot():
-#     df = plots.df
-#     fig = plots.fig
-#     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
-#     return render_template(graphJSON=graphJSON)
 
 
 if __name__ == "__main__":
