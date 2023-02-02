@@ -16,6 +16,6 @@ class NertalNetwork(nn.Module):
         out = self.l2(out)
         out = self.relu(out)
         out = self.l3(out)
-        # no activation or softmax because cross entropy does that for us
+        # no activation or softmax yet
 
         return out

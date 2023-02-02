@@ -41,7 +41,6 @@ def get_response(sentence):
     output = model(X)
     _, predicted = torch.max(output, dim=1)
     tag = tags[predicted.item()]
-    # TODO - yield tag to perform alteration 
 
     # if unsure ... softmax
     probabilities = torch.softmax(output, dim=1)

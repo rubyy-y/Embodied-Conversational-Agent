@@ -23,8 +23,6 @@ for intent in intents['intents']:
 
 # make set to remove duplicates, but return as list via sorted
 all_words = sorted(set(all_words))
-
-# TODO - add intents
 tags = sorted(set(tags))
 
 X_train, y_train = [], []
