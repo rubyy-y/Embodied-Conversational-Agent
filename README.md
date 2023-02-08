@@ -27,10 +27,3 @@ Progress updates on this project will be presented roughly every three weeks on 
 * nltk 3.7
 * torch 1.11.0
 * flask 2.1.3
-
-### To-Do
-modify intents <br>
--> what can you do? <br>
--> what is your name, about you <br>
--> player specific questions? <br>
--> create data visualizations on website (https://www.canva.com/graphs/) <br>
