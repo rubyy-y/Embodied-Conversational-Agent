@@ -22,33 +22,6 @@ def user_stats(username):
     return quest
 
 
-def get_user_data(username, info):
-    """
-    returns playerspecific information
-    username: name of user
-    info: desired information
-    """
-
-    # check if user exists
-    if exists(username) == "This user does not exist.":
-        raise KeyError("This user does not exist.")
-    
-    # if it does, check if info key available
-    else:
-        data = user_stats(username)['data']
-        if info not in ['id', 'name', 'level', 'progress']:
-            raise KeyError("Enter valid info key: ['id', 'name', 'level', 'progress']")
-
-        elif info == 'id':
-            return data['account']['id']
-        elif info == 'name':
-            return data['account']['name']
-        elif info == 'level':
-            return data['battlePass']['level']
-        elif info == 'progress':
-            return data['battlePass']['progress']
-
-
 def get_stats(username, data, stats_key='all', type='overall'):
     """
     method returns given statistic for username
@@ -139,20 +112,6 @@ def get_stats(username, data, stats_key='all', type='overall'):
                 #                      'playersOutlived', 'lastModified']
 # __________________________________________________________________________________________
 
-# def news():
-#     news_url = "https://fortnite-api.com/v2/news"
-#     news = json.loads(requests.get(news_url, headers={'Authorization': key}).content)
-#     br = news['data']['br']
-#     stw = news['data']['stw']
-#     creative = news['data']['creative']
-
-#     print(list(br))
-#     return list(br)
-
-# news()
-
-
-# ___________________
 # ___example usage___
 
 # username = 'p-six'

@@ -91,8 +91,6 @@ class Chatbox {
                                 "matches", "winRate", "scorePerMin", "scorePerMatch", "score", 
                                 "killsPerMin", "killsPerMatch", "playersOutlived"]
             if (plot_options.includes(tag)) {
-
-                // console.log(tag)
                 const plot = document.getElementById("plot");
                 plot.innerHTML = "<img src='../static/plots/" + tag + ".png' height='300'></img>"
             }
@@ -100,12 +98,11 @@ class Chatbox {
             tag += '_wid'
             const wid = document.getElementById(tag);
             
-            // console.log(tag)
             wid.style.background = "#5B5D6B";
             setTimeout(() => { wid.style.background = "#F3F4F8"; }, 1500);
         })
         .catch((error) => {
-            // console.error('oh no, an error:', error);
+            console.error('oh no, an error:', error);
             this.updateChatText(chatbox)
             textField.value = ''
         });
@@ -113,6 +110,7 @@ class Chatbox {
 
     updateChatText(chatbox) {
         var html = '';
+        const chatmessage = chatbox.querySelector('.chatbox__messages');
 
         // go over all messages and modify inner html code
         this.messages.slice().reverse().forEach(function(item, index) {
@@ -125,8 +123,6 @@ class Chatbox {
                 html += '<div class="messages__item messages__item--operator">' + item.message + '</div>'
             }
           });
-
-        const chatmessage = chatbox.querySelector('.chatbox__messages');
         chatmessage.innerHTML = html;
     }
 
@@ -145,7 +141,6 @@ const user = userName.querySelector('input');
         user.addEventListener("keyup", ({key}) => {
             if (key === "Enter") {
                 username = document.getElementById('username').value
-                // console.log(username)
 
                 fetch($SCRIPT_ROOT + '/username', {
                         method: 'POST',
